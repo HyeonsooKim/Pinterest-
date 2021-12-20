@@ -127,6 +127,14 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+#python manage.py collectstatic 명령어 실행 시 static 파일들을 모아주는데 어디 모아줄 지 정해주는 것
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+#app에 종속되지 않는 static파일을 관리하는 곳
+STATICFILES_DIRS =[
+    BASE_DIR / "static",
+]
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
