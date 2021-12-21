@@ -133,6 +133,12 @@ STATIC_URL = 'static/'
 #python manage.py collectstatic 명령어 실행 시 static 파일들을 모아주는데 어디 모아줄 지 정해주는 것
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
+#media 이하의 경로로 접근해야 실제 media file에 접근할 수 있다는 것
+MEDIA_URL = '/media/'
+
+#서버에 media를 올렸을 때 기본적으로 어디 저장될 것인지 정해주는 것
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 #app에 종속되지 않는 static파일을 관리하는 곳
 STATICFILES_DIRS =[
     BASE_DIR / "static",
