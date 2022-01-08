@@ -6,7 +6,7 @@
         <div class="mb-4;">
             <h4>Comment Create</h4>
         </div>
-        <form action="{% url 'accountapp:create' %}" method="post">
+        <form action="{% url 'commentapp:create' %}" method="post">
             {% csrf_token %}
             {% bootstrap_form form %}
             {% if user.is_authenticated %}
